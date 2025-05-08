@@ -11,7 +11,8 @@ services:
       - ./tls.key:/etc/cert/tls.key:ro
       - ./tls.crt:/etc/cert/tls.crt:ro
       - ./keycloak.conf:/opt/keycloak/keycloak.conf
-    command: --config-file=/opt/keycloak/keycloak.conf start
+      - ./realm-config.json:/opt/keycloak/data/import/realm-config.json
+    command: --config-file=/opt/keycloak/keycloak.conf start --import-realm
     depends_on:
       - postgresql
     networks:

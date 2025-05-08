@@ -14,6 +14,13 @@ Before proceeding, verify that port 8080 is not in use on your system.
 
     POSTGRES_USER=<The postgres user for postgreSQL>
     POSTGRES_PASSWORD=<The postgres password for postgreSQL>
+
+    REALM_NAME=<realm name>
+    REALM_ADMIN_USER=<realm user name with admin role>
+    REALM_ADMIN_PASSWORD=<realm user password with admin role>
+    REALM_NORMAL_USER=<realm user name with user role>
+    REALM_NORMAL_PASSWORD=<realm user password with user role>
+    REALM_CLIENT_ID=<realm client id>
     ```
     For `keycloak.conf`
     ```
@@ -36,3 +43,4 @@ Before proceeding, verify that port 8080 is not in use on your system.
 ## Reference
 * [Keycloak document](https://www.keycloak.org/guides)
 * [Self-Signed vs. CA-Signed Certificates](https://medium.com/@talyitzhak/understanding-digital-certificates-and-self-signed-certificates-b1cdca759bbc)
+* [Automated realm configruation with json config](https://medium.com/@devripper133127/keycloak-in-docker-automated-configuration-with-json-config-216f86bb4ad7)
