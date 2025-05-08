@@ -12,7 +12,7 @@ create-ca:
 
 clean-ca:
 	# Remove CA related files
-	rm ca.*
+	rm -f ca.*
 
 create-cert:
 	# Private key
@@ -27,10 +27,10 @@ create-cert:
 		-extensions v3_ext -extfile csr.conf -sha256
 
 clean-cert:
-	rm tls.*
+	rm -f tls.*
 
 launch-keycloak:
 	docker compose up -d
 
 shutdown-keycloak:
-	docker compose down --remove-orphans
+	docker compose down --remove-orphans --volumes
