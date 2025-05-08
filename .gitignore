@@ -2,5 +2,6 @@
 ca.*
 tls.*
 
-# Python virtual environment
+# Python related
 .venv
+__pycache__
