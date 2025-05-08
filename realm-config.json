@@ -5,6 +5,9 @@
     {
       "username": "${REALM_ADMIN_USER}",
       "enabled": true,
+      "email": "${REALM_ADMIN_USER}@gmail.com",
+      "firstName": "${REALM_ADMIN_USER}_FIRST_NAME",
+      "lastName": "${REALM_ADMIN_USER}_LAST_NAME",
       "emailVerified": true,
       "credentials": [
         {
@@ -17,6 +20,9 @@
     {
       "username": "${REALM_NORMAL_USER}",
       "enabled": true,
+      "email": "${REALM_NORMAL_USER}@gmail.com",
+      "firstName": "${REALM_NORMAL_USER}_FIRST_NAME",
+      "lastName": "${REALM_NORMAL_USER}_LAST_NAME",
       "emailVerified": true,
       "credentials": [
         {
@@ -39,9 +45,11 @@
   },
   "clients": [
     {
-      "clientId": "myclient",
-      "publicClient": true,
+      "clientId": "${REALM_CLIENT_ID}",
+      "publicClient": false,
       "redirectUris": ["*"],
+      "clientAuthenticatorType": "client-secret",
+      "secret": "${REALM_CLIENT_SECRET}",
       "directAccessGrantsEnabled": true
     }
   ]

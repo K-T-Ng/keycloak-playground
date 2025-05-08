@@ -1,3 +1,6 @@
 # Self-Signed certificates
 ca.*
 tls.*
+
+# Python virtual environment
+.venv
