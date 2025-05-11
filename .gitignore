@@ -4,4 +4,5 @@ tls.*
 
 # Python related
 .venv
+.mypy_cache
 __pycache__
